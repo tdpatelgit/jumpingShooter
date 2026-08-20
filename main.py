@@ -9,6 +9,7 @@ import green_insect
 class Game:
     def __init__(self):
         pygame.init()
+        pygame.font.init()
 
         pygame.display.set_caption("Jumper Shooter")
 
