@@ -9,7 +9,6 @@ import green_insect
 class Game:
     def __init__(self):
         pygame.init()
-        pygame.font.init()
 
         pygame.display.set_caption("Jumper Shooter")
 
@@ -78,7 +77,6 @@ class Game:
     def start_screen(self):
         start_button = pygame.Rect(self.screen_width // 2 - 100, 200, 200, 50)
         quit_button = pygame.Rect(self.screen_width // 2 - 100, 300, 200, 50)
-        font = pygame.font.Font(None, 36)
 
         while self.scene == "start":
             for event in pygame.event.get():
@@ -108,8 +106,6 @@ class Game:
                                   110, 200, 50)
         menu_button = pygame.Rect(self.screen_width // 2 - 100,
                                   180, 200, 50)
-
-        font = pygame.font.Font(None, 36)
 
         self.screen.blit(self.pause_menu_background, (self.screen_width // 2 - self.pause_menu_width // 2,
                                                       self.screen_height // 2 - self.pause_menu_height // 2))
